@@ -11,6 +11,7 @@ def get_stock_data():
     return jsonify({'error': 'API key and ticker symbol are required'}), 400
 
   url = f'https://financialmodelingprep.com/api/v3/quote/{ticker}?apikey={api_key}'
+
   response = requests.get(url)
 
   if response.status_code != 200:
